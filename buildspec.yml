@@ -37,13 +37,10 @@ phases:
     #commands:
       # - command
       # - command
-build:
+  build:
     commands:
-      #- npm install aws-cdk -g
-      #- npm install
-      #- npm run build
-      #- cdk bootstrap
       - cdk deploy --require-approval "never"
+    #cdk_subcommand: "deploy --require-approval never"
       # - command
       # - command
   #post_build:
