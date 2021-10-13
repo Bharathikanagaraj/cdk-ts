@@ -7,7 +7,6 @@ import { Port, SecurityGroup } from '@aws-cdk/aws-ec2';
 import { ManagedPolicy, Policy, Role } from '@aws-cdk/aws-iam';
 import { Tag } from "@aws-cdk/core";
 
-
 export class EC2RDSStack extends cdk.Stack {
   
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
