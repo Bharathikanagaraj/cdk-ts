@@ -19,14 +19,18 @@ version: 0.2
   #build-list:
   #build-matrix:
   #build-graph:
-#phases:
-  #install:
+phases:
+  install:
     #If you use the Ubuntu standard image 2.0 or later, you must specify runtime-versions.
     #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
     #runtime-versions:
       # name: version
       # name: version
-    #commands:
+    commands:
+      - npm install aws-cdk -g
+      - npm install
+      - npm run build
+      - cdk bootstrap
       # - command
       # - command
   #pre_build:
@@ -35,10 +39,10 @@ version: 0.2
       # - command
 build:
     commands:
-      - npm install aws-cdk -g
-      - npm install
-      - npm run build
-      - cdk bootstrap
+      #- npm install aws-cdk -g
+      #- npm install
+      #- npm run build
+      #- cdk bootstrap
       - cdk deploy --require-approval "never"
       # - command
       # - command
